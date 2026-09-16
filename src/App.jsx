@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
+import MovieListingPage from "./pages/MovieListingPage";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -13,9 +14,7 @@ export default function App() {
       {currentPage === "home" ? (
         <HomePage onNavigateToMovies={() => setCurrentPage("movies")} />
       ) : (
-        <main className="flex-1 p-8 text-center text-slate-400">
-          Movie Listing Page placeholder
-        </main>
+        <MovieListingPage />
       )}
 
       <Footer />
