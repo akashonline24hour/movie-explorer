@@ -1,16 +1,35 @@
-# React + Vite
+# 🎬 MovieExplorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive React web application for exploring movies and TV shows powered by the **TVMaze API**. Built with **React**, **Tailwind CSS**, and **Vite**, featuring dynamic search, detailed modal views, and seamless navigation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🍿 **Explore Popular Shows:** Browse curated titles on launch.
+- 🔍 **Real-Time Live Search:** Search shows dynamically via TVMaze API with instant updates.
+- 📱 **Fully Responsive Grid:** Clean layout built using Tailwind CSS grid for mobile, tablet, and desktop views.
+- 🎭 **Interactive Modal View:** Detailed overlay showing high-res backdrop, release date, average ratings, genres, and clean summaries.
+- 🎨 **Sleek Dark Theme:** Carefully designed dark UI with slate accents and indigo highlights.
+- ⚡ **Lightweight & Fast:** Powered by Vite for optimized performance.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack & Libraries
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Technology / Library | Purpose                          |
+| :------------------- | :------------------------------- |
+| **React 18**         | UI Library & State Management    |
+| **Vite**             | Build Tooling & Dev Server       |
+| **Tailwind CSS**     | Utility-first CSS Framework      |
+| **Lucide React**     | Modern SVG Icon Set              |
+| **TVMaze REST API**  | Free Movie & TV Show Data Source |
+
+---
+
+## 🚀 Live Demo & Links
+
+- **Hosted App:** [https://movie-explorer-ten-chi.vercel.app/](https://movie-explorer-ten-chi.vercel.app/)
+- **GitHub Repository:** [https://github.com/akashonline24hour/movie-explorer](https://github.com/akashonline24hour/movie-explorer)
+
+---
