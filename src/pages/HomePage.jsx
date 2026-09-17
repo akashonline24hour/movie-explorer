@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import HeroBanner from "../components/HeroBanner";
 
-export default function HomePage({ onNavigateToMovies }) {
+export default function HomePage() {
+  const navigate = useNavigate();
+
   return (
-    <main className="flex-1">
-      <HeroBanner onExploreClick={onNavigateToMovies} />
-    </main>
+    <div>
+      <HeroBanner onExplore={() => navigate("/movies")} />
+    </div>
   );
 }

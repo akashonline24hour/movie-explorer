@@ -1,38 +1,43 @@
+import { Link, useLocation } from "react-router-dom";
 import { Film } from "lucide-react";
 
-export default function Navbar({ currentPage, setCurrentPage }) {
-  return (
-    <nav className="bg-slate-900 border-b border-slate-800 text-white sticky top-0 z-40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <button
-          onClick={() => setCurrentPage("home")}
-          className="flex items-center space-x-2 text-xl font-bold text-indigo-400 hover:text-indigo-300 transition"
-        >
-          <Film className="w-7 h-7" />
-          <span>MovieExplorer</span>
-        </button>
+export default function Navbar() {
+  const location = useLocation();
 
+  return (
+    <nav className="bg-slate-900 border-b border-slate-800 sticky top-0 z-40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        {/* Brand Logo */}
+        <Link
+          to="/"
+          className="flex items-center space-x-2 text-slate-100 hover:text-indigo-400 transition"
+        >
+          <Film className="w-6 h-6 text-indigo-400" />
+          <span className="font-bold text-lg tracking-wide">MovieExplorer</span>
+        </Link>
+
+        {/* Navigation Links */}
         <div className="flex items-center space-x-4">
-          <button
-            onClick={() => setCurrentPage("home")}
-            className={`px-3 py-2 rounded-md text-sm font-medium transition ${
-              currentPage === "home"
-                ? "text-indigo-400 font-semibold"
-                : "text-slate-300 hover:text-white"
+          <Link
+            to="/"
+            className={`px-3 py-1.5 rounded-lg text-sm font-medium transition ${
+              location.pathname === "/"
+                ? "bg-indigo-600 text-white"
+                : "text-slate-300 hover:bg-slate-800 hover:text-white"
             }`}
           >
             Home
-          </button>
-          <button
-            onClick={() => setCurrentPage("movies")}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
-              currentPage === "movies"
-                ? "bg-indigo-600 text-white hover:bg-indigo-500"
-                : "bg-slate-800 text-slate-200 hover:bg-slate-700"
+          </Link>
+          <Link
+            to="/movies"
+            className={`px-3 py-1.5 rounded-lg text-sm font-medium transition ${
+              location.pathname === "/movies"
+                ? "bg-indigo-600 text-white"
+                : "text-slate-300 hover:bg-slate-800 hover:text-white"
             }`}
           >
             Movies
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
